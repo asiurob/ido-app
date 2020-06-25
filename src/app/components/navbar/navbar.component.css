@@ -1,0 +1,41 @@
+mat-sidenav-container {
+    height: calc( 100% - 64px );
+}
+
+mat-sidenav {
+    width: 25%;
+}
+
+mat-sidenav-content {
+    background-color: #e0e0e0;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin: 0.75rem 1rem;
+}
+
+.nav-item {
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+    border-bottom: 1px dashed #ccc;
+    text-align: center;
+}
+
+.nav-item:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    mat-sidenav {
+      width: 50%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    mat-sidenav {
+      width: 75%;
+    }
+}

@@ -1,4 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
-
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: #e0e0e0;
+}
+
+.btn:focus,.btn:active:focus,.btn.active:focus,
+.btn.focus,.btn:active.focus,.btn.active.focus {
+    outline: none !important;
+    box-shadow:none !important;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+.pointer { cursor: pointer; }  
+.fs20 { font-size: 2rem !important; }
+.fs19 { font-size: 1.9rem !important; }
+.fs18 { font-size: 1.8rem !important; }
+.fs17 { font-size: 1.7rem !important; }
+.fs16 { font-size: 1.6rem !important; }
+.fs15 { font-size: 1.5rem !important; }
+.fs14 { font-size: 1.4rem !important; }
+.fs13 { font-size: 1.3rem !important; }
+.fs12 { font-size: 1.2rem !important; }
+.fs11 { font-size: 1.1rem !important; }
+.fs10 { font-size: 1rem !important; }
+.fs9 { font-size: 0.9rem !important; }
+.fs8 { font-size: 0.8rem !important; }
+.fs7 { font-size: 0.7rem !important; }
+.fs6 { font-size: 0.6rem !important; }
+.fs5 { font-size: 0.5rem !important; }

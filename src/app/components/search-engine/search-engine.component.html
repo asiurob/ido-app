@@ -1,0 +1,8 @@
+<form [formGroup]="form" class="mt-3">
+    <mat-form-field class="w-100">
+        <mat-label>¿Qué quieres buscar?</mat-label>
+        <input matInput placeholder="Herrero, carpintero, hojalatero" formControlName="search">
+        <mat-error *ngIf="form.touched">Indica que estás buscando</mat-error>
+    </mat-form-field>
+    <button mat-stroked-button class="w-100 mt-2">Buscar</button>
+</form>
