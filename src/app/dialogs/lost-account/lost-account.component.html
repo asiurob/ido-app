@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-2">
+    <button mat-mini-fab color="primary">
+      <mat-icon class="float-left pointer" (click)="dismiss(true)">navigate_before</mat-icon>
+    </button>
+  </div>
+  <div class="col-9">
+    <h2 mat-dialog-title>
+      Recuperación de contraseña
+    </h2>
+  </div>
+  <div class="col-1 mt-1">
+    <mat-icon class="float-right pointer" (click)="dismiss()">close</mat-icon>
+  </div>
+</div>
+<mat-dialog-content>
+  <form [formGroup]="form">
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <mat-form-field class="w-100" appearance="outline">
+            <mat-label>
+              Ingresa tu correo electrónico
+            </mat-label>
+            <input matInput placeholder="tunombre@dominio.com" formControlName="email">
+            <mat-error>No parece un correo electrónico</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-group mt-1">
+          <button mat-raised-button color="primary" type="submit" class="w-100">Recuperar</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</mat-dialog-content>

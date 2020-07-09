@@ -12,6 +12,7 @@ import {MatListModule} from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import {MatCardModule} from '@angular/material/card';
 import { SearchEngineModule } from '@components/search-engine/search-engine.module';
+import { DialogControllerModule } from '@dialogs/dialog-controller.module';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { SearchEngineModule } from '@components/search-engine/search-engine.modu
     MatListModule,
     MatDividerModule,
     MatCardModule,
-    SearchEngineModule
+    SearchEngineModule,
+    DialogControllerModule
   ],
   exports: [ NavbarComponent ]
 })

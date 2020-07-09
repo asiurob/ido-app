@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>
+  Unirme a oficio
+  <small class="text-muted">libre</small>
+  <mat-icon class="float-right pointer" (click)="dismiss()">close</mat-icon>
+</h2>
+<mat-dialog-content>
+  <form [formGroup]="form">
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <mat-form-field class="w-100" appearance="outline">
+            <mat-label>
+              Ingresa tu correo electrónico
+            </mat-label>
+            <input matInput placeholder="tunombre@dominio.com" formControlName="email">
+            <mat-hint>
+              ¿No tienes un correo electrónico? Haz clic
+              <a [href]="googleHref" target="_blank">aquí</a>
+            </mat-hint>
+            <mat-error>No parece un correo electrónico</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field class="w-100" appearance="outline">
+            <mat-label>
+              Agrega una contraseña
+            </mat-label>
+            <input matInput formControlName="password" type="email" placeholder="Tu contraseña aquí">
+            <mat-error>Se requiere una contraseña</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-group mt-1">
+          <button mat-raised-button color="primary" type="submit" class="w-100">Registarme</button>
+        </div>
+      </div>
+    </div>
+  </form>
+  <mat-divider class="my-3"></mat-divider>
+  <h4 class="text-center fs8">¿Ya tienes una cuenta?
+    <span class="pointer text-primary" (click)="dismiss(true)"> Inicia sesión</span>
+  </h4>
+</mat-dialog-content>

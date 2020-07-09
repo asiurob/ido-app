@@ -1,28 +1,47 @@
-<mat-toolbar color="secondary">
-  <button mat-icon-button (click)="navigator.toggle()">
-    <mat-icon>menu</mat-icon>
-  </button>
-</mat-toolbar>
+<div class="row bg-black py-1 px-2">
+  <div class="col-1" (click)="navigator.toggle()" *ngIf="query.matches">
+    <button mat-icon-button>
+      <mat-icon class="text-light">menu</mat-icon>
+    </button>
+  </div>
+  <div [ngClass]="{ 'col-5 offset-6': query.matches, 'col-3': !query.matches }">
+    <h1 class="text-light text-right text-sm-left mt-1 mx-1">Oficio libre</h1>
+  </div>
 
-<mat-sidenav-container [style.marginTop.px]="">
+  <div class="col-4 offset-4 mt-1" *ngIf="!query.matches">
+    <div class="row">
+      <div class="col-6">
+        <button class="btn btn-block btn-outline-light btm-sm" (click)="login()">Ingresar</button>
+      </div>
+      <div class="col-6">
+        <button class="btn btn-block btn-light btm-sm" (click)="register()">Registrarme</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<mat-sidenav-container>
   <mat-sidenav #navigator mode="over" [fixedInViewport]="true">
     <div class="clearfix mt-2">
       <p class="float-left title">
         oficio <small class="text-muted">Libre</small>
       </p>
-      <mat-icon (click)="navigator.toggle()" class="float-right mt-2 mr-4 pointer">
+      <mat-icon (click)="navigator.close()" class="float-right mt-2 mr-4 pointer">
         close
       </mat-icon>
 
     </div>
     <mat-divider></mat-divider>
     <mat-list role="list">
-      <mat-list-item role="listitem" class="nav-item">
+      <mat-list-item role="listitem" class="nav-item" (click)="register()">
         Unirme a oficio libre
       </mat-list-item>
-      <mat-list-item role="listitem" class="nav-item">Entrar a mi cuenta</mat-list-item>
+      <mat-list-item role="listitem" class="nav-item" (click)="login()">
+        Entrar a mi cuenta
+      </mat-list-item>
     </mat-list>
-    <div class="px-2 py-5">
+    <div class="px-2 py-5 mx-2">
       <div class="card shadow shadow-sm mt-3">
         <div class="card-body">
           <h3 class="text-center">
@@ -31,13 +50,19 @@
           <p class="text-muted text-center mb-3">
             Cada día hay más categorías y más gente que quiere sorprenderte
           </p>
-          <mat-divider></mat-divider>
-          <app-search-engine></app-search-engine>
         </div>
       </div>
     </div>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div class="container-fluid"></div>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-sm-8 offset-sm-2">
+          <div class="card shadow shadow-sm p-3">
+            <app-search-engine></app-search-engine>
+          </div>
+        </div>
+      </div>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

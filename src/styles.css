@@ -15,6 +15,10 @@ button:focus {
     outline: none !important;
 }
 
+.bg-black {
+    background-color: #000 !important;
+}
+
 .pointer { cursor: pointer; }  
 .fs20 { font-size: 2rem !important; }
 .fs19 { font-size: 1.9rem !important; }

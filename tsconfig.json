@@ -8,7 +8,8 @@
       "@interfaces/*": [ "./src/app/interfaces/*" ],
       "@helpers/*": [ "./src/app/helpers/*" ],
       "@pipes/*": [ "./src/app/pipes/*" ],
-      "@directives/*": [ "./src/app/directives/*" ]
+      "@directives/*": [ "./src/app/directives/*" ],
+      "@dialogs/*": [ "./src/app/dialogs/*" ],
     },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",

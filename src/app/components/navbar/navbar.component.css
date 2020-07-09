@@ -24,8 +24,9 @@ mat-sidenav-content {
 }
 
 .nav-item:hover {
-    background-color: #000;
+    background-color:#3f51b5;
     color: #fff;
+    font-weight: 600;
 }
 
 @media only screen and (max-width: 768px) {
